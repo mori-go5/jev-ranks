@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+  <defs>
+    <radialGradient id="sun"><stop stop-color="#ffdc72" stop-opacity=".48"/><stop offset="1" stop-color="#ffdc72" stop-opacity="0"/></radialGradient>
+    <radialGradient id="mint"><stop stop-color="#74d7ca" stop-opacity=".34"/><stop offset="1" stop-color="#74d7ca" stop-opacity="0"/></radialGradient>
+  </defs>
+  <rect width="1200" height="630" fill="#f6f4ed"/>
+  <circle cx="140" cy="70" r="430" fill="url(#sun)"/><circle cx="1100" cy="80" r="390" fill="url(#mint)"/>
+  <path d="M0 90H1200M0 180H1200M0 270H1200M0 360H1200M0 450H1200M0 540H1200M100 0V630M200 0V630M300 0V630M400 0V630M500 0V630M600 0V630M700 0V630M800 0V630M900 0V630M1000 0V630M1100 0V630" stroke="#16263d" stroke-opacity=".06"/>
+  <rect x="72" y="64" width="1056" height="502" rx="28" fill="#fffdf8" fill-opacity=".92" stroke="#d9d8cf" stroke-width="2"/>
+  <text x="124" y="143" fill="#2258d6" font-family="Arial,sans-serif" font-size="27" font-weight="700" letter-spacing="2">JEV</text>
+  <text x="185" y="143" fill="#16263d" font-family="Arial,sans-serif" font-size="27" letter-spacing="2">RANKS</text>
+  <circle cx="127" cy="202" r="6" fill="#2258d6"/>
+  <text x="147" y="209" fill="#66758a" font-family="Arial,sans-serif" font-size="17">AIランキングメーカー</text>
+  <text x="124" y="326" fill="#16263d" font-family="Arial,sans-serif" font-size="66" font-weight="700">身近なものを、</text>
+  <text x="124" y="414" fill="#2258d6" font-family="Arial,sans-serif" font-size="66" font-weight="700">Jevならどう並べる？</text>
+  <text x="126" y="482" fill="#66758a" font-family="Arial,sans-serif" font-size="22">題材とテーマを選ぶだけ。候補をまとめて評価します。</text>
+  <rect x="930" y="465" width="130" height="10" rx="5" fill="#65bdb3"/>
+</svg>

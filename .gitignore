@@ -1,0 +1,11 @@
+.nuxt
+.output
+.data
+.vercel
+node_modules
+.env
+.env.*
+!.env.example
+coverage
+dist
+.DS_Store

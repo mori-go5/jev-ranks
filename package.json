@@ -1,0 +1,36 @@
+{
+  "name": "jev-ranks",
+  "private": true,
+  "description": "Jevが題材を共通基準で評価するランキングアプリ",
+  "type": "module",
+  "packageManager": "pnpm@10.17.1",
+  "engines": {
+    "node": ">=22",
+    "pnpm": ">=10"
+  },
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "lint": "eslint .",
+    "postinstall": "nuxt prepare",
+    "preview": "nuxt preview",
+    "test": "vitest run",
+    "typecheck": "nuxt typecheck"
+  },
+  "dependencies": {
+    "@ai-sdk/typesafe-ai": "^3.0.8",
+    "@fontsource-variable/space-grotesk": "^5.2.8",
+    "@upstash/ratelimit": "^2.2.0",
+    "@upstash/redis": "^1.39.0",
+    "ai": "^7.0.118",
+    "nuxt": "^4.5.2",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@nuxt/eslint": "^1.15.2",
+    "eslint": "^10.11.0",
+    "typescript": "^5.9.3",
+    "vitest": "^4.0.13",
+    "vue-tsc": "^3.3.11"
+  }
+}
