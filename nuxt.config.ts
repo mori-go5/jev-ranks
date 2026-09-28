@@ -17,11 +17,23 @@ export default defineNuxtConfig({
       meta: [
         {
           name: 'description',
-          content: '身近なものをJevがまとめて評価。題材とテーマを選ぶだけで、AIランキングを作ろう。',
+          content: '好きなテーマで、Jevがいろいろランキング。',
         },
+        { property: 'og:type', content: 'website' },
+        { property: 'og:title', content: 'Jev Ranks' },
+        { property: 'og:description', content: '好きなテーマで、Jevがいろいろランキング。' },
+        { property: 'og:image', content: 'https://jev-ranks.vercel.app/og-image.png' },
+        { property: 'og:url', content: 'https://jev-ranks.vercel.app/' },
+        { name: 'twitter:card', content: 'summary_large_image' },
+        { name: 'twitter:title', content: 'Jev Ranks' },
+        { name: 'twitter:description', content: '好きなテーマで、Jevがいろいろランキング。' },
+        { name: 'twitter:image', content: 'https://jev-ranks.vercel.app/og-image.png' },
         { name: 'theme-color', content: '#f6f4ed' },
       ],
-      link: [{ rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' }],
+      link: [
+        { rel: 'icon', type: 'image/svg+xml', href: '/favicon.svg' },
+        { rel: 'canonical', href: 'https://jev-ranks.vercel.app/' },
+      ],
     },
   },
   routeRules: {

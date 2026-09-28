@@ -8,16 +8,6 @@ import { commonThemes, findDataset, findTheme, rankingDatasets } from '#shared/d
 import { makeCustomCandidates, parseCustomItems, validateCustomItemLabels } from '#shared/utils/custom-dataset'
 import type { RankingDataset, RankingResult, RankingTheme } from '#shared/types/ranking'
 
-useSeoMeta({
-  title: 'Jev Ranks',
-  description: '身近なものをJevがまとめて評価。題材とテーマを選ぶだけで、AIランキングを作ろう。',
-  ogTitle: 'Jev Ranks',
-  ogDescription: '題材とテーマを選ぶだけ。Jevが候補をまとめて評価し、ランキングを作ります。',
-  ogType: 'website',
-  ogImage: '/og-image.png',
-  twitterCard: 'summary_large_image',
-})
-
 const selectedDatasetId = ref('japan-prefectures')
 const isCustomDataset = ref(false)
 const customDatasetText = ref('')
