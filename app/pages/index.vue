@@ -246,7 +246,9 @@ onMounted(() => {
 
     <footer class="site-footer">
       <span>JEV RANKS</span>
-      <span>結果は保存されません</span>
+      <a href="https://github.com/mori-go5" target="_blank" rel="noopener noreferrer">
+        作成者：mori-go5 <span aria-hidden="true">↗</span>
+      </a>
     </footer>
   </main>
 </template>

@@ -124,6 +124,9 @@ h1 span { color: var(--acid); }
 .method-content { max-width: 780px; padding: 0 0 12px; color: var(--muted); font-size: 11px; line-height: 1.8; }
 .method-content p { margin: 7px 0; }
 .site-footer { min-height: 52px; border-top: 1px solid var(--line); color: var(--muted); font-family: var(--display); font-size: 9px; font-weight: 500; }
+.site-footer a { color: inherit; text-decoration: none; transition: color 180ms ease; }
+.site-footer a:hover, .site-footer a:focus-visible { color: var(--ink); }
+.site-footer a span { color: var(--acid); }
 
 .results-view { padding: 30px 0 40px; scroll-margin-top: 20px; }
 .results-topline { padding-bottom: 20px; border-bottom: 1px solid var(--line); }
