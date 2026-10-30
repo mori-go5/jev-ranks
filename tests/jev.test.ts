@@ -27,7 +27,7 @@ describe('Jev score adapter', () => {
 
     expect(evaluator).toHaveBeenCalledTimes(1)
     expect(Object.keys(call?.questions ?? {})).toHaveLength(47)
-    expect(call?.maxRetries).toBe(1)
+    expect(call?.maxRetries).toBe(0)
     expect(call?.abortSignal).toBeInstanceOf(AbortSignal)
     expect(result.scores.size).toBe(47)
     expect(result.modelId).toBe('jev-latest')

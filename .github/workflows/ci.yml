@@ -37,8 +37,13 @@ jobs:
       - name: Lint
         run: pnpm lint
 
+      - name: Install Redis for atomic usage tests
+        run: sudo apt-get update && sudo apt-get install -y redis-server redis-tools
+
       - name: Test
         run: pnpm test
+        env:
+          RUN_REDIS_TESTS: "1"
 
       - name: Build
         run: pnpm build

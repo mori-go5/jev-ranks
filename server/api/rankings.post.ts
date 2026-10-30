@@ -2,6 +2,7 @@ import { createError, defineEventHandler, getRequestHeader, getRequestIP, readRa
 import { evaluateRanking, JevProviderError, JevResponseError, JevTimeoutError } from '../utils/jev'
 import { RateLimitUnavailableError, checkRankingRateLimit } from '../utils/rate-limit'
 import { validateRankingRequest, RankingRequestError } from '../utils/validation'
+import { reserveRankingUsage } from '../utils/usage-limit'
 import { sortRankingEntries } from '#shared/utils/ranking'
 
 export default defineEventHandler(async (event) => {
@@ -41,6 +42,18 @@ export default defineEventHandler(async (event) => {
   if (!limit.success) {
     setResponseHeader(event, 'Retry-After', Math.max(1, Math.ceil((limit.reset - Date.now()) / 1_000)))
     throw createError({ statusCode: 429, statusMessage: 'Too many rankings' })
+  }
+
+  let usage: Awaited<ReturnType<typeof reserveRankingUsage>>
+  try {
+    usage = await reserveRankingUsage()
+  }
+  catch {
+    throw createError({ statusCode: 503, statusMessage: 'Ranking service temporarily unavailable' })
+  }
+  if (!usage.success) {
+    setResponseHeader(event, 'Retry-After', usage.retryAfter)
+    throw createError({ statusCode: 503, statusMessage: 'Ranking service temporarily unavailable' })
   }
 
   try {
