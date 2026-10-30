@@ -23,7 +23,7 @@ export async function evaluateRanking(
       state: buildRankingState(dataset, theme),
       questions: buildScoreQuestions(dataset, theme),
       abortSignal,
-      maxRetries: 1,
+      maxRetries: 0,
     })
 
     return {
